@@ -8,7 +8,9 @@ def fn(nums):
         if nums[i] > nums[i + 1]:
             breaks += 1
         i += 1
-    return breaks > 1
+    if nums[-1] > nums[0]:
+        breaks += 1
+    return breaks < 2
 
 input = [3,4,5,1,2]
 output = True
